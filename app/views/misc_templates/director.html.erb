@@ -1,0 +1,16 @@
+<h1> Hello World </h1>
+
+
+  <table border="1">
+    <tr>
+      <th> Name </th>
+      <th> DOB </th>
+    </tr>
+<%@director_table.each do |person|%>
+    <tr>
+      <td> <%=person.name%> </td>
+      <td> <%=person.dob%> </td>
+    </tr>
+<%end%>
+  
+  </table>
