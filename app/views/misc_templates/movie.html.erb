@@ -16,8 +16,8 @@
       <td> <img src="<%=film.image%>" style="width:250px;"> </td>
       <td> <%=film.title%> </td>
       <td> <%=film.year%> </td>
-      <td> <%=Director.where({ :id => film.director_id }).name%> </td>
-      <td> <a href = "/directors/<%=film.id%>""> Show Details </a></td>
+      <td> <%=Director.where({ :id => film.director_id }).at(0).name%> </td>
+      <td> <a href = "/movies/<%=film.id%>""> Show Details </a></td>
     </tr>
 <%end%>
   
