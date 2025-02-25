@@ -3,4 +3,19 @@ Rails.application.routes.draw do
 
   #Director Table
   get("/directors", { :controller => "misc", :action => "directors" })
+
+  #Director_Individual_Biopage
+  get("/directors/:id", { :controller => "misc", :action => "director_bio"})
+
+  #Movie_Descripton_Page
+  get("movies/:movie_id", { :controller => "misc", :action => "movie_desc" })
+
+  #All_movies_table
+  get("/movies", { :controller => "misc", :action => "movies" })
+
+  #All_actors_table
+  get("/actors", { :controller => "misc", :action => "actors" })
+
+  #Actor_Bio_Page 
+  get("/actors/:actor_id", { :controller => "misc", :action => "actor_bio"})
 end

@@ -1,4 +1,4 @@
-<h1> List of all directors </h1>
+<h1> List of all actors </h1>
 
 
   <table border="1">
@@ -7,16 +7,14 @@
       <th> Image </th>
       <th> Name </th>
       <th> DOB </th>
-      <th> </th>
+      <th>  </th>
     </tr>
-<%@director_table.each do |person|%>
+<%@actor_table.each do |person|%>
     <tr>
       <td> <%=person.id%> </td>
       <td> <img src="<%=person.image%>" style="width:250px;"> </td>
       <td> <%=person.name%> </td>
       <td> <%=person.dob%> </td>
-      <td> <a href = "/directors/<%=person.id%>""> Show Details </a></td>
+      <td> <a href = "/actors/<%=person.id%>""> Show Details </a></td>
     </tr>
 <%end%>
-  
-  </table>
