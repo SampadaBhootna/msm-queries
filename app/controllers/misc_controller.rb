@@ -46,4 +46,20 @@ def actor_bio
   
   render ({:template => "misc_templates/actor_bio"})
 end
+
+def youngest_director
+  @list_of_directors = Director.all
+  @descending_list = @list_of_directors.where.not({ :dob => nil }).order({:dob => :desc})
+  @youngest_director = @descending_list.at(0).name
+
+  render ({:template => "misc_templates/youngest_director"})
+end
+
+def eldest_director
+  @list_of_directors = Director.all
+  @ascending_list = @list_of_directors.where.not({ :dob => nil }).order({:dob => :asc})
+  @eldest_director = @ascending_list.at(0).name
+
+  render ({:template => "misc_templates/eldest_director"})
+end
 end
